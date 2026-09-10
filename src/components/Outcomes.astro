@@ -1,0 +1,29 @@
+---
+const outcomes = [
+  { icon: '📑', title: 'Invoices that file themselves' },
+  { icon: '✉️', title: 'Email inboxes that draft their own replies' },
+  { icon: '📅', title: 'Bookings with no back-and-forth' },
+  { icon: '📝', title: 'Meeting notes that log their own action items' },
+  { icon: '📥', title: 'Leads that route themselves into your CRM' },
+];
+---
+
+<section id="outcomes" class="outcomes-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag" style="margin-bottom: 0.8rem;">Evening Freedom</div>
+      <div class="section-subtitle">Automation Outcomes</div>
+      <h2 class="section-title">What would you do with your evenings back?</h2>
+      <p class="section-description">Quiet background systems integrated directly into your existing tools.</p>
+    </div>
+
+    <div class="outcomes-grid">
+      {outcomes.map((item) => (
+        <div class="outcome-card">
+          <div class="outcome-icon">{item.icon}</div>
+          <h3>{item.title}</h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

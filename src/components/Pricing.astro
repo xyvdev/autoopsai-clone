@@ -1,0 +1,78 @@
+---
+const freePerks = [
+  '15-minute 1-on-1 operational audit',
+  'Identify top 3 daily time sinks',
+  'Quantified hours & ROI recovery estimate',
+  'Zero sales pressure or tech jargon',
+];
+
+const paidPerks = [
+  '60-minute deep operational assessment',
+  'Complete custom workflow architecture blueprint',
+  'Software integration matrix (CRM, Email, Accounting)',
+  '100% credited toward implementation',
+];
+---
+
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-subtitle">Action Options</div>
+      <h2 class="section-title">Schedule Your AI Bottleneck Call</h2>
+      <p class="section-description">Choose the tier that fits your goals for immediate time recovery.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="pricing-card featured">
+        <div class="popular-badge">🔥 Limited Time Only</div>
+        <div>
+          <div class="pricing-header">
+            <h3>15-Min AI Mini-Audit</h3>
+            <p>Rapid bottleneck discovery for busy owners seeking quick wins.</p>
+          </div>
+          <div class="price-tag">
+            <span class="price-amount">FREE</span>
+            <span class="price-strike">(Normally $250 - Limited Time)</span>
+          </div>
+          <ul class="perks-list">
+            {freePerks.map((perk) => (
+              <li><span class="check">✓</span> {perk}</li>
+            ))}
+          </ul>
+        </div>
+        <a href="#" class="btn-primary full-width js-stub-cta">
+          Book My Free 15-Min Chat →
+        </a>
+      </div>
+
+      <div class="pricing-card">
+        <div>
+          <div class="pricing-header">
+            <h3>Full AI Assessment Call</h3>
+            <p>Deep-dive architecture roadmap for owners ready for full automation.</p>
+          </div>
+          <div class="price-tag">
+            <span class="price-amount">$999</span>
+            <span class="price-note">/ one-time strategy</span>
+          </div>
+          <ul class="perks-list">
+            {paidPerks.map((perk) => (
+              <li><span class="check">✓</span> {perk}</li>
+            ))}
+          </ul>
+        </div>
+        <a href="#" class="btn-secondary full-width js-stub-cta">
+          Schedule $999 Assessment →
+        </a>
+      </div>
+    </div>
+
+    <div class="guarantee-card">
+      <h4>Zero-Risk Guarantee for Paid Assessments</h4>
+      <p>
+        If we can't identify at least 5 hours/week of clear automation potential within 7 days of your audit, receive
+        a 100% refund - no questions asked.
+      </p>
+    </div>
+  </div>
+</section>

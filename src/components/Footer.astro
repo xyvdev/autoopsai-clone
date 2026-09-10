@@ -1,0 +1,25 @@
+---
+const links = [
+  { href: '#story', label: 'Before & After' },
+  { href: '#outcomes', label: 'Outcomes' },
+  { href: '#how-it-works', label: 'How It Works' },
+  { href: '#pricing', label: 'Audit Options' },
+];
+---
+
+<footer class="footer">
+  <div class="container footer-content">
+    <div>
+      <div class="footer-brand">AutoOps AI Automation Services</div>
+      <div>Custom AI workflows for SMBs.</div>
+    </div>
+
+    <ul class="footer-links">
+      {links.map((link) => (
+        <li><a href={link.href}>{link.label}</a></li>
+      ))}
+    </ul>
+
+    <div>© 2026 AutoOps AI. All rights reserved.</div>
+  </div>
+</footer>

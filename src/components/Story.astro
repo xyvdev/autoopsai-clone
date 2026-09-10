@@ -1,0 +1,49 @@
+---
+const beats = [
+  {
+    icon: '◐',
+    title: 'Maria opens shop',
+    body: 'Runs a small business service center. Loves the work - sorting inbox queries, not so much.',
+    highlight: false,
+  },
+  {
+    icon: '✉',
+    title: 'Buried in busywork',
+    body: 'Every Sunday night: answering repetitive prospective client questions and sifting through general inquiries. Again.',
+    highlight: false,
+  },
+  {
+    icon: '✦',
+    title: 'AutoOps steps in',
+    body: 'An AI Email Assistant working silently behind her shared inbox. No complex setup to master. No additional team needed.',
+    highlight: true,
+  },
+  {
+    icon: '☺',
+    title: 'Sunday is Sunday again',
+    body: 'Incoming emails draft their own personalized, context-aware responses automatically. She simply "Reviews" & clicks "Send" on Monday morning.',
+    highlight: true,
+  },
+];
+---
+
+<section id="story" class="story-section">
+  <div class="container">
+    <div class="section-header">
+      <div class="badge-tag" style="margin-bottom: 0.8rem;">Case Study</div>
+      <div class="section-subtitle">Real-World Transformation</div>
+      <h2 class="section-title">One Sunday, Before & After</h2>
+      <p class="section-description">How a quiet system gives business owners their evenings and weekends back.</p>
+    </div>
+
+    <div class="story-grid">
+      {beats.map((beat) => (
+        <div class:list={['story-card', { highlight: beat.highlight }]}>
+          <div class="story-icon">{beat.icon}</div>
+          <h3>{beat.title}</h3>
+          <p>{beat.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

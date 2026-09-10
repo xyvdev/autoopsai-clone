@@ -1,0 +1,33 @@
+---
+
+---
+
+<div id="bookingModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
+    <h3 id="modalTitle" class="modal-title">Book Your Free Audit</h3>
+    <p class="modal-lead">Map your bottlenecks and reclaim your team's capacity.</p>
+
+    <form id="stubBookingForm" class="modal-form">
+      <div class="form-group">
+        <label for="stub-name">Your Name</label>
+        <input id="stub-name" type="text" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+      </div>
+      <div class="form-group">
+        <label for="stub-email">Work Email</label>
+        <input id="stub-email" type="email" class="form-control" placeholder="sarah@yourcompany.com" required />
+      </div>
+      <div class="form-group">
+        <label for="stub-industry">Business / Industry</label>
+        <input id="stub-industry" type="text" class="form-control" placeholder="e.g. Real Estate Agency / Contracting" required />
+      </div>
+      <button type="submit" class="btn-primary full-width">
+        Continue to booking →
+      </button>
+    </form>
+
+    <div id="stubSuccess" class="modal-success" role="status">
+      Booking is stubbed in this clone. No calendar or live booking destination is connected.
+    </div>
+  </div>
+</div>

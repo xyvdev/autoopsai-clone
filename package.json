@@ -1,0 +1,19 @@
+{
+  "name": "autoopsai-clone",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pixel-faithful AutoOps AI marketing site clone, ready for Cloudflare Pages.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1 --port 43123",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1 --port 43123",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
+  }
+}
