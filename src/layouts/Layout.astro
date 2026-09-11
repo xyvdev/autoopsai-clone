@@ -34,6 +34,11 @@ const {
         } else {
           document.documentElement.removeAttribute('data-theme');
         }
+        try {
+          if (sessionStorage.getItem('autoops_staging_banner_dismissed') === '1') {
+            document.documentElement.classList.add('staging-banner-dismissed');
+          }
+        } catch (e) {}
       })();
     </script>
   </head>

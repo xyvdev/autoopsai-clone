@@ -38,7 +38,7 @@ const beats = [
 
     <div class="story-grid">
       {beats.map((beat) => (
-        <div class:list={['story-card', { highlight: beat.highlight }]}>
+        <div class:list={['story-card', 'reveal', { highlight: beat.highlight }]}>
           <div class="story-icon">{beat.icon}</div>
           <h3>{beat.title}</h3>
           <p>{beat.body}</p>

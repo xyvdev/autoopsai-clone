@@ -1,0 +1,85 @@
+---
+const updates = [
+  {
+    title: 'Sticky “You’re on Staging” banner',
+    what: 'A slim, dismissible bar sits at the top of every page so reviewers know this is staging, not production.',
+    why: 'Staging and prod can look identical. A quiet environment marker prevents accidental “this is live” confusion without looking like a broken site.',
+  },
+  {
+    title: 'Hero trust strip',
+    what: 'Three proof points sit under the primary CTA: Built for SMBs, Live in 7 days, and Works in your inbox. The Book CTA is larger and more isolated.',
+    why: 'The headline was doing all the work. A short trust row answers “is this for me?” before the fold, and extra CTA weight makes the next step obvious.',
+  },
+  {
+    title: 'Mini-Audit card emphasis',
+    what: 'The free 15-min Mini-Audit is marked Recommended, visually stronger than the $999 assessment, and stacks first on mobile with room for the badge.',
+    why: 'Reviewers should immediately see the free offer as the default path. Equal-weight cards made the paid assessment compete with the intended starting point.',
+  },
+  {
+    title: 'Softer card motion',
+    what: 'Feature and outcome cards fade in on scroll and use a lighter hover lift. Motion respects prefers-reduced-motion and uses CSS plus a small IntersectionObserver — no extra libraries.',
+    why: 'A little motion helps the page feel considered on staging review, without hurting performance or distracting from the copy.',
+  },
+  {
+    title: 'This “What’s new on staging” panel',
+    what: 'The floating control opens a staging-only changelog with a short What and Why for each UI change.',
+    why: 'Reviewers should not have to leave the deploy or hunt in a markdown file to understand what changed and why.',
+  },
+];
+---
+
+<button
+  id="stagingReviewToggle"
+  class="staging-review-toggle"
+  type="button"
+  aria-expanded="false"
+  aria-controls="stagingReviewPanel"
+>
+  What’s new on staging
+</button>
+
+<div
+  id="stagingReviewBackdrop"
+  class="staging-review-backdrop"
+  hidden
+  data-close-review
+></div>
+
+<aside
+  id="stagingReviewPanel"
+  class="staging-review-panel"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="stagingReviewTitle"
+  hidden
+>
+  <div class="staging-review-header">
+    <div>
+      <p class="staging-review-kicker">Staging only</p>
+      <h2 id="stagingReviewTitle" class="staging-review-title">What’s new on staging</h2>
+    </div>
+    <button
+      id="stagingReviewClose"
+      class="staging-review-close"
+      type="button"
+      aria-label="Close staging changelog"
+    >
+      Close
+    </button>
+  </div>
+  <p class="staging-review-lead">
+    Each item below is a staging UI change for review. Booking destinations are unchanged and still open the stub modal.
+  </p>
+  <ol class="staging-review-list">
+    {updates.map((item, index) => (
+      <li class="staging-review-item">
+        <span class="staging-review-index">{String(index + 1).padStart(2, '0')}</span>
+        <div>
+          <h3>{item.title}</h3>
+          <p><span class="staging-review-label">What</span> {item.what}</p>
+          <p><span class="staging-review-label">Why</span> {item.why}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</aside>

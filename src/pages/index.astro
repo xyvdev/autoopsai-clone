@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import StagingBanner from '../components/StagingBanner.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Story from '../components/Story.astro';
@@ -9,10 +10,14 @@ import Pricing from '../components/Pricing.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import Footer from '../components/Footer.astro';
 import BookingModal from '../components/BookingModal.astro';
+import StagingReview from '../components/StagingReview.astro';
 ---
 
 <Layout>
-  <Header />
+  <div class="site-chrome">
+    <StagingBanner />
+    <Header />
+  </div>
   <main>
     <Hero />
     <Story />
@@ -23,4 +28,5 @@ import BookingModal from '../components/BookingModal.astro';
   </main>
   <Footer />
   <BookingModal />
+  <StagingReview />
 </Layout>

@@ -1,5 +1,18 @@
 ---
-
+const proofs = [
+  {
+    label: 'Built for SMBs',
+    icon: 'smb',
+  },
+  {
+    label: 'Live in 7 days',
+    icon: 'clock',
+  },
+  {
+    label: 'Works in your inbox',
+    icon: 'inbox',
+  },
+];
 ---
 
 <section class="hero-section">
@@ -18,10 +31,35 @@
 
     <div class="hero-actions">
       <a href="#" class="btn-primary hero-cta js-stub-cta">Book My Free 15-Min Chat →</a>
+      <p class="hero-cta-hint">15 minutes. No pitch. No jargon.</p>
     </div>
 
-    <div class="trust-bar">
-      <span>No pitch, no jargon - just a look at where your time's going.</span>
-    </div>
+    <ul class="trust-strip">
+      {proofs.map((item) => (
+        <li class="trust-strip-item">
+          <span class="trust-strip-icon" aria-hidden="true">
+            {item.icon === 'smb' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 20V9.5L12 4l8 5.5V20" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9 20v-6h6v6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            )}
+            {item.icon === 'clock' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 8v4.2l2.5 1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            )}
+            {item.icon === 'inbox' && (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 13h4l2 3h4l2-3h4v6H4v-6Z" stroke-linejoin="round"></path>
+                <path d="M4 13 7 5h10l3 8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            )}
+          </span>
+          {item.label}
+        </li>
+      ))}
+    </ul>
   </div>
 </section>
