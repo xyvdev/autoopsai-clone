@@ -1,28 +1,53 @@
 ---
 const updates = [
   {
-    title: 'Sticky “You’re on Staging” banner',
-    what: 'A slim, dismissible bar sits at the top of every page so reviewers know this is staging, not production.',
-    why: 'Staging and prod can look identical. A quiet environment marker prevents accidental “this is live” confusion without looking like a broken site.',
+    title: 'Night-console color system',
+    what: 'The site is now ink, warm ivory, and gold instead of light slate and emerald. Surfaces, borders, buttons, and section fields all share one dark luxury palette. Light mode is a cream/espresso inversion of the same system — not the old marketing greens.',
+    why: 'Staging review needed an unmistakable new direction. Recoloring one accent was not enough; the whole token set had to change so every screen reads as a different product.',
   },
   {
-    title: 'Hero trust strip',
-    what: 'Three proof points sit under the primary CTA: Built for SMBs, Live in 7 days, and Works in your inbox. The Book CTA is larger and more isolated.',
-    why: 'The headline was doing all the work. A short trust row answers “is this for me?” before the fold, and extra CTA weight makes the next step obvious.',
+    title: 'Serif display + console mono type',
+    what: 'Headlines use Fraunces (italic for emphasis). UI copy uses Outfit. Labels, badges, and status chips use IBM Plex Mono. Hierarchy is larger, more editorial, and less “SaaS rounded sans.”',
+    why: 'Typography is the fastest way to leave the previous Plus Jakarta / Inter marketing look. Serif display plus mono chrome is the night-desk voice.',
   },
   {
-    title: 'Mini-Audit card emphasis',
-    what: 'The free 15-min Mini-Audit is marked Recommended, visually stronger than the $999 assessment, and stacks first on mobile with room for the badge.',
-    why: 'Reviewers should immediately see the free offer as the default path. Equal-weight cards made the paid assessment compete with the intended starting point.',
+    title: 'Split-panel hero with ops board',
+    what: 'The centered hero is gone. Copy sits on the left; a live-looking operations board on the right shows queue, recovered hours, channel, and build status. Proof points are LED-style chips, not a pill strip.',
+    why: 'A new visual direction needs a new fold structure. The board makes “quiet automation” tangible instead of another centered headline over a green button.',
   },
   {
-    title: 'Softer card motion',
-    what: 'Feature and outcome cards fade in on scroll and use a lighter hover lift. Motion respects prefers-reduced-motion and uses CSS plus a small IntersectionObserver — no extra libraries.',
-    why: 'A little motion helps the page feel considered on staging review, without hurting performance or distracting from the copy.',
+    title: 'Before / After dual-rail story',
+    what: 'The four equal feature cards are now two rails: Before (01–02) and After (03–04), like a field log. The After rail is gold-lit.',
+    why: 'The original grid treated every beat the same. A dual rail makes the transformation the layout, not just the copy.',
+  },
+  {
+    title: 'Outcomes as a command spec sheet',
+    what: 'Emoji cards are replaced by a numbered spec sheet: index, outcome line, and a mono signal tag (AP, INBOX, CAL, NOTES, CRM).',
+    why: 'The old six-column emoji grid still felt like a generic marketing features row. A spec sheet matches the ops-console tone and scans better on mobile.',
+  },
+  {
+    title: 'How-it-works process stations',
+    what: 'Three connected stations (01–03) sit on a gold track instead of three equal rounded cards. Large serif numerals carry the sequence.',
+    why: 'The protocol should feel like a procedure, not another card grid. Stations make the 15-min → 7-day → it-runs path read as one line.',
+  },
+  {
+    title: 'Foil-ticket pricing cards',
+    what: 'Audit options are membership-ticket cards: sharp corners, gold foil on the recommended Mini-Audit, dimmer console treatment on the $999 assessment. Free still stacks first on mobile.',
+    why: 'Pricing needed to join the luxury-console system. The Mini-Audit remains the default path, now as a foil pass instead of a green “popular” card.',
+  },
+  {
+    title: 'Console staging banner',
+    what: 'The “You’re on Staging” bar is restyled as an ENV // STAGING ticker: gold on ink, mono type, dismiss still session-scoped.',
+    why: 'The environment marker has to belong to the new chrome. A leftover emerald strip would look like production debris on the night desk.',
+  },
+  {
+    title: 'Dark-first default + console header',
+    what: 'First paint is dark (not light). The header is a night-desk lockup (AO monogram, “ops // night desk”) with Log / Signals / Protocol / Access. Theme toggle still cycles Auto / Dark / Light.',
+    why: 'A luxury night console that opens in the old light theme would undercut the redesign. Dark-first makes staging feel like the intended product.',
   },
   {
     title: 'This “What’s new on staging” panel',
-    what: 'The floating control opens a staging-only changelog with a short What and Why for each UI change.',
+    what: 'The floating control and drawer match the night-console chrome. Each item below is a staging UI change with a short What and Why.',
     why: 'Reviewers should not have to leave the deploy or hunt in a markdown file to understand what changed and why.',
   },
 ];
@@ -69,7 +94,7 @@ const updates = [
     </button>
   </div>
   <p class="staging-review-lead">
-    Each item below is a staging UI change for review. Booking destinations are unchanged and still open the stub modal.
+    Night-console redesign for staging review. Booking destinations are unchanged and still open the stub modal.
   </p>
   <ol class="staging-review-list">
     {updates.map((item, index) => (

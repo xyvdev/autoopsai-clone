@@ -1,65 +1,89 @@
 ---
 const proofs = [
-  {
-    label: 'Built for SMBs',
-    icon: 'smb',
-  },
-  {
-    label: 'Live in 7 days',
-    icon: 'clock',
-  },
-  {
-    label: 'Works in your inbox',
-    icon: 'inbox',
-  },
+  { label: 'Built for SMBs', meta: 'SMB', icon: 'smb' },
+  { label: 'Live in 7 days', meta: 'T+7', icon: 'clock' },
+  { label: 'Works in your inbox', meta: 'INBOX', icon: 'inbox' },
+];
+
+const boardRows = [
+  { key: 'QUEUE', value: '00 open', status: 'clear' },
+  { key: 'RECOVERED', value: '8h / week', status: 'live' },
+  { key: 'CHANNEL', value: 'shared inbox', status: 'live' },
+  { key: 'BUILD', value: '7-day install', status: 'ready' },
 ];
 ---
 
 <section class="hero-section">
-  <div class="container">
-    <div class="badge-tag">Zero-Code AI Workflows</div>
+  <div class="container hero-split">
+    <div class="hero-copy">
+      <p class="console-kicker"><span class="kicker-led" aria-hidden="true"></span> Zero-code AI workflows</p>
 
-    <h1 class="hero-stat-heading">
-      Your business shouldn't need you at <span class="stat-highlight">9 PM</span>
-    </h1>
+      <h1 class="hero-stat-heading">
+        Your business shouldn’t need you at <em class="stat-highlight">9 PM</em>
+      </h1>
 
-    <p class="hero-description">
-      You started this to build something - not to spend your nights on invoices, emails, and reminding people to show
-      up.<br />
-      We quietly automate the busywork so you can actually run your business.
-    </p>
+      <p class="hero-description">
+        You started this to build something — not to spend nights on invoices, emails, and reminding people to show up.
+        We quietly automate the busywork so you can actually run the desk.
+      </p>
 
-    <div class="hero-actions">
-      <a href="#" class="btn-primary hero-cta js-stub-cta">Book My Free 15-Min Chat →</a>
-      <p class="hero-cta-hint">15 minutes. No pitch. No jargon.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary hero-cta js-stub-cta">Book My Free 15-Min Chat →</a>
+        <p class="hero-cta-hint">15 minutes. No pitch. No jargon.</p>
+      </div>
+
+      <ul class="trust-strip">
+        {proofs.map((item) => (
+          <li class="trust-strip-item">
+            <span class="trust-strip-icon" aria-hidden="true">
+              {item.icon === 'smb' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 20V9.5L12 4l8 5.5V20" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M9 20v-6h6v6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              )}
+              {item.icon === 'clock' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="8"></circle>
+                  <path d="M12 8v4.2l2.5 1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              )}
+              {item.icon === 'inbox' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 13h4l2 3h4l2-3h4v6H4v-6Z" stroke-linejoin="round"></path>
+                  <path d="M4 13 7 5h10l3 8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              )}
+            </span>
+            <span class="trust-strip-meta">{item.meta}</span>
+            {item.label}
+          </li>
+        ))}
+      </ul>
     </div>
 
-    <ul class="trust-strip">
-      {proofs.map((item) => (
-        <li class="trust-strip-item">
-          <span class="trust-strip-icon" aria-hidden="true">
-            {item.icon === 'smb' && (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 20V9.5L12 4l8 5.5V20" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9 20v-6h6v6" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            )}
-            {item.icon === 'clock' && (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="8"></circle>
-                <path d="M12 8v4.2l2.5 1.6" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            )}
-            {item.icon === 'inbox' && (
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 13h4l2 3h4l2-3h4v6H4v-6Z" stroke-linejoin="round"></path>
-                <path d="M4 13 7 5h10l3 8" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            )}
-          </span>
-          {item.label}
-        </li>
-      ))}
-    </ul>
+    <aside class="ops-board" aria-label="Operations snapshot">
+      <div class="ops-board-chrome">
+        <span class="ops-live" aria-hidden="true"></span>
+        <span>SYS // AUTOOPS</span>
+        <span class="ops-board-clock">NIGHT DESK</span>
+      </div>
+      <p class="ops-board-title">Live ops board</p>
+      <p class="ops-board-lead">What a quiet system looks like after install — hours back, queue empty, same tools.</p>
+      <ul class="ops-board-rows">
+        {boardRows.map((row) => (
+          <li class={`ops-row status-${row.status}`}>
+            <span class="ops-key">{row.key}</span>
+            <span class="ops-rule" aria-hidden="true"></span>
+            <span class="ops-value">{row.value}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="ops-board-footer">
+        <span>owner load</span>
+        <div class="ops-meter" aria-hidden="true"><i></i></div>
+        <span>low</span>
+      </div>
+    </aside>
   </div>
 </section>

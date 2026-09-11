@@ -1,17 +1,20 @@
 ---
 const links = [
-  { href: '#story', label: 'Before & After' },
-  { href: '#outcomes', label: 'Outcomes' },
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#pricing', label: 'Audit Options' },
+  { href: '#story', label: 'Log' },
+  { href: '#outcomes', label: 'Signals' },
+  { href: '#how-it-works', label: 'Protocol' },
+  { href: '#pricing', label: 'Access' },
 ];
 ---
 
 <header class="header">
   <div class="container nav-wrapper">
     <a href="#" class="brand-logo">
-      <span class="logo-icon">&gt;</span>
-      AutoOps AI
+      <span class="logo-icon">AO</span>
+      <span class="brand-lockup">
+        <span class="brand-name">AutoOps AI</span>
+        <span class="brand-meta">ops // night desk</span>
+      </span>
     </a>
     <ul class="nav-links">
       {links.map((link) => (
@@ -25,9 +28,12 @@ const links = [
         type="button"
         title="Toggle Theme (Auto / Dark / Light)"
       >
-        <span id="themeIcon">☀️</span> <span id="themeLabel">Light</span>
+        <span id="themeIcon">🌙</span> <span id="themeLabel">Dark</span>
       </button>
-      <a href="#" class="btn-primary js-stub-cta">Book Free Audit</a>
+      <a href="#" class="btn-primary js-stub-cta">
+        <span class="nav-cta-full">Book Free Audit</span>
+        <span class="nav-cta-short">Book</span>
+      </a>
     </div>
   </div>
 </header>

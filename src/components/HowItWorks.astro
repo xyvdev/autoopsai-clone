@@ -1,17 +1,20 @@
 ---
 const steps = [
   {
-    badge: 'FIRST',
+    num: '01',
+    badge: 'First',
     title: 'Free 15-min chat',
     body: "We ask what's eating your week. That's it.",
   },
   {
-    badge: 'THEN',
-    title: 'We build it - 7 days',
+    num: '02',
+    badge: 'Then',
+    title: 'We build it — 7 days',
     body: "You don't touch a thing. Ready inside your existing inbox and tools.",
   },
   {
-    badge: 'AFTER THAT',
+    num: '03',
+    badge: 'After that',
     title: 'It just runs',
     body: "Check in when you want to. Otherwise, it's handled.",
   },
@@ -20,20 +23,21 @@ const steps = [
 
 <section id="how-it-works" class="steps-section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-subtitle">Simple & Frictionless</div>
-      <h2 class="section-title">How It Works</h2>
-      <p class="section-description">You've got a business to run. We handle the rest of it.</p>
+    <div class="section-header section-header-left">
+      <p class="section-subtitle">Protocol</p>
+      <h2 class="section-title">How it works</h2>
+      <p class="section-description">You’ve got a business to run. We handle the rest of it.</p>
     </div>
 
-    <div class="steps-grid">
+    <ol class="process-track">
       {steps.map((step) => (
-        <div class="step-card reveal">
-          <div class="step-badge">{step.badge}</div>
+        <li class="station-card reveal">
+          <span class="station-num">{step.num}</span>
+          <p class="step-badge">{step.badge}</p>
           <h3>{step.title}</h3>
           <p>{step.body}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ol>
   </div>
 </section>
