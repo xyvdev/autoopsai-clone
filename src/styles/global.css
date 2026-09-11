@@ -1180,8 +1180,8 @@ body {
   margin-right: 0.3rem;
 }
 
-body.staging-review-open {
-  overflow: hidden;
+.staging-review-toggle-short {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -1290,6 +1290,16 @@ body.staging-review-open {
   .staging-review-toggle {
     right: 0.85rem;
     bottom: 0.85rem;
+    font-size: 0.78rem;
+    padding: 0.6rem 0.85rem;
+  }
+
+  .staging-review-toggle-full {
+    display: none;
+  }
+
+  .staging-review-toggle-short {
+    display: inline;
   }
 
   .staging-review-panel {
@@ -1336,6 +1346,18 @@ body.staging-review-open {
 
   .cta-banner-box h2 {
     font-size: 1.75rem;
+  }
+
+  .pricing-card.featured {
+    padding-bottom: 3.25rem;
+  }
+
+  .cta-banner {
+    padding-bottom: 5rem;
+  }
+
+  .footer {
+    padding-bottom: 5rem;
   }
 }
 
