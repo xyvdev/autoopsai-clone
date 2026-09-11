@@ -16,9 +16,9 @@ const paidPerks = [
 
 <section id="pricing" class="pricing-section">
   <div class="container">
-    <div class="section-header">
-      <div class="section-subtitle">Action Options</div>
-      <h2 class="section-title">Schedule Your AI Bottleneck Call</h2>
+    <div class="section-header section-header-left">
+      <p class="section-subtitle">Access</p>
+      <h2 class="section-title">Schedule your AI bottleneck call</h2>
       <p class="section-description">Choose the tier that fits your goals for immediate time recovery.</p>
     </div>
 
@@ -32,12 +32,12 @@ const paidPerks = [
             <p>Rapid bottleneck discovery for busy owners seeking quick wins.</p>
           </div>
           <div class="price-tag">
-            <span class="price-amount">FREE</span>
-            <span class="price-strike">(Normally $250 - Limited Time)</span>
+            <span class="price-amount">Free</span>
+            <span class="price-strike">Normally $250 — limited time</span>
           </div>
           <ul class="perks-list">
             {freePerks.map((perk) => (
-              <li><span class="check">✓</span> {perk}</li>
+              <li><span class="check" aria-hidden="true">▸</span> {perk}</li>
             ))}
           </ul>
         </div>
@@ -59,7 +59,7 @@ const paidPerks = [
           </div>
           <ul class="perks-list">
             {paidPerks.map((perk) => (
-              <li><span class="check">✓</span> {perk}</li>
+              <li><span class="check" aria-hidden="true">▸</span> {perk}</li>
             ))}
           </ul>
         </div>
@@ -70,10 +70,10 @@ const paidPerks = [
     </div>
 
     <div class="guarantee-card">
-      <h4>Zero-Risk Guarantee for Paid Assessments</h4>
+      <h4>Zero-risk guarantee for paid assessments</h4>
       <p>
-        If we can't identify at least 5 hours/week of clear automation potential within 7 days of your audit, receive
-        a 100% refund - no questions asked.
+        If we can’t identify at least 5 hours/week of clear automation potential within 7 days of your audit, receive
+        a 100% refund — no questions asked.
       </p>
     </div>
   </div>

@@ -2,33 +2,65 @@
 
 These notes match the on-page **What’s new on staging** panel. Staging-only — not for production/`main`.
 
-## Sticky “You’re on Staging” banner
+Direction: a **night-console / luxury ops desk** redesign. Ink, warm ivory, and gold replace the previous light emerald/slate marketing page. Booking CTAs remain stubbed (`href="#"` + existing modal).
 
-**What:** A slim, dismissible bar sits at the top of every page so reviewers know this is staging, not production.
+## Night-console color system
 
-**Why:** Staging and prod can look identical. A quiet environment marker prevents accidental “this is live” confusion without looking like a broken site.
+**What:** The site is now ink, warm ivory, and gold instead of light slate and emerald. Surfaces, borders, buttons, and section fields all share one dark luxury palette. Light mode is a cream/espresso inversion of the same system — not the old marketing greens.
 
-## Hero trust strip
+**Why:** Staging review needed an unmistakable new direction. Recoloring one accent was not enough; the whole token set had to change so every screen reads as a different product.
 
-**What:** Three proof points sit under the primary CTA: Built for SMBs, Live in 7 days, and Works in your inbox. The Book CTA is larger and more isolated.
+## Serif display + console mono type
 
-**Why:** The headline was doing all the work. A short trust row answers “is this for me?” before the fold, and extra CTA weight makes the next step obvious.
+**What:** Headlines use Fraunces (italic for emphasis). UI copy uses Outfit. Labels, badges, and status chips use IBM Plex Mono. Hierarchy is larger, more editorial, and less “SaaS rounded sans.”
 
-## Mini-Audit card emphasis
+**Why:** Typography is the fastest way to leave the previous Plus Jakarta / Inter marketing look. Serif display plus mono chrome is the night-desk voice.
 
-**What:** The free 15-min Mini-Audit is marked Recommended, visually stronger than the $999 assessment, and stacks first on mobile with room for the badge.
+## Split-panel hero with ops board
 
-**Why:** Reviewers should immediately see the free offer as the default path. Equal-weight cards made the paid assessment compete with the intended starting point.
+**What:** The centered hero is gone. Copy sits on the left; a live-looking operations board on the right shows queue, recovered hours, channel, and build status. Proof points are LED-style chips, not a pill strip.
 
-## Softer card motion
+**Why:** A new visual direction needs a new fold structure. The board makes “quiet automation” tangible instead of another centered headline over a green button.
 
-**What:** Feature and outcome cards fade in on scroll and use a lighter hover lift. Motion respects prefers-reduced-motion and uses CSS plus a small IntersectionObserver — no extra libraries.
+## Before / After dual-rail story
 
-**Why:** A little motion helps the page feel considered on staging review, without hurting performance or distracting from the copy.
+**What:** The four equal feature cards are now two rails: Before (01–02) and After (03–04), like a field log. The After rail is gold-lit.
+
+**Why:** The original grid treated every beat the same. A dual rail makes the transformation the layout, not just the copy.
+
+## Outcomes as a command spec sheet
+
+**What:** Emoji cards are replaced by a numbered spec sheet: index, outcome line, and a mono signal tag (AP, INBOX, CAL, NOTES, CRM).
+
+**Why:** The old six-column emoji grid still felt like a generic marketing features row. A spec sheet matches the ops-console tone and scans better on mobile.
+
+## How-it-works process stations
+
+**What:** Three connected stations (01–03) sit on a gold track instead of three equal rounded cards. Large serif numerals carry the sequence.
+
+**Why:** The protocol should feel like a procedure, not another card grid. Stations make the 15-min → 7-day → it-runs path read as one line.
+
+## Foil-ticket pricing cards
+
+**What:** Audit options are membership-ticket cards: sharp corners, gold foil on the recommended Mini-Audit, dimmer console treatment on the $999 assessment. Free still stacks first on mobile.
+
+**Why:** Pricing needed to join the luxury-console system. The Mini-Audit remains the default path, now as a foil pass instead of a green “popular” card.
+
+## Console staging banner
+
+**What:** The “You’re on Staging” bar is restyled as an ENV // STAGING ticker: gold on ink, mono type, dismiss still session-scoped.
+
+**Why:** The environment marker has to belong to the new chrome. A leftover emerald strip would look like production debris on the night desk.
+
+## Dark-first default + console header
+
+**What:** First paint is dark (not light). The header is a night-desk lockup (AO monogram, “ops // night desk”) with Log / Signals / Protocol / Access. Theme toggle still cycles Auto / Dark / Light.
+
+**Why:** A luxury night console that opens in the old light theme would undercut the redesign. Dark-first makes staging feel like the intended product.
 
 ## This “What’s new on staging” panel
 
-**What:** The floating control opens a staging-only changelog with a short What and Why for each UI change.
+**What:** The floating control and drawer match the night-console chrome. Each item below is a staging UI change with a short What and Why.
 
 **Why:** Reviewers should not have to leave the deploy or hunt in a markdown file to understand what changed and why.
 

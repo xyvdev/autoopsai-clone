@@ -11,7 +11,7 @@ const stubSuccess = document.getElementById('stubSuccess');
 
 function getSavedTheme(): Theme {
   const saved = localStorage.getItem('autoops_theme');
-  return themes.includes(saved as Theme) ? (saved as Theme) : 'light';
+  return themes.includes(saved as Theme) ? (saved as Theme) : 'dark';
 }
 
 function applyTheme(theme: Theme) {
