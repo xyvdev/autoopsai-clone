@@ -416,6 +416,10 @@ html.staging-banner-dismissed .staging-banner {
   font-size: 0.75rem;
 }
 
+.nav-cta-short {
+  display: none;
+}
+
 /* Hero — split panel */
 .hero-section {
   padding: 4.5rem 0 4.25rem;
@@ -1405,6 +1409,22 @@ html.staging-banner-dismissed .staging-banner {
     display: none;
   }
 
+  .brand-meta {
+    display: none;
+  }
+
+  .nav-cta-full {
+    display: none;
+  }
+
+  .nav-cta-short {
+    display: inline;
+  }
+
+  .nav-actions .btn-primary {
+    white-space: nowrap;
+  }
+
   #themeToggleBtn span#themeLabel {
     display: none;
   }
@@ -1424,6 +1444,10 @@ html.staging-banner-dismissed .staging-banner {
 @media (max-width: 600px) {
   .hero-section {
     padding: 2.6rem 0 2.4rem;
+  }
+
+  .ops-board {
+    margin-bottom: 2.75rem;
   }
 
   .hero-description {
